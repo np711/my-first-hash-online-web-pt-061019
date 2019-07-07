@@ -35,14 +35,24 @@ def adding
                   "porcelain vases" => 2, 
                   "oil paintings" => 3
                  }
-  # add 2 muskets to the shipping_manifest hash below
+  context "Challenge III: Retrieving Data" do 
+  describe "#retrieval" do 
+    it "operates on the shipping_manifest hash to return the value of the 'oil paintings' key" do 
+      expect(retrieval).to eq(3)
+    end
+  end
+end
 
-
-
-  # add 4 gun powder to the shipping_manifest hash below
-
-
-
-  # return the shipping_manifest hash below
-
+context "Challenge IV: Adding Data" do 
+  describe "#adding" do 
+    it "operates on the shipping_manifest hash to add a key/value pair" do 
+      expect(adding).to eq({
+                      "whale bone corsets" => 5, 
+                      "porcelain vases" => 2, 
+                      "oil paintings" => 3, 
+                      "muskets" => 2,
+                      "gun powder" => 4
+                      })
+    end
+  end
 end
