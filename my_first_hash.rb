@@ -9,10 +9,11 @@ describe "#my_hash" do
 end
 
 
-def shipping_manifest
-  # set a variable called `the_manifest`, equal to a hash
-  # fill that hash with key/value pairs that describe the following information: 
-  # We have 5 whale bone corsets, 2 porcelain vases and 3 oil paintings 
+describe "#shipping_manifest" do 
+    it "returns a hash with key/value pairs describing old-timey items" do 
+      expect(shipping_manifest.keys).to match_array(["whale bone corsets", "oil paintings", "porcelain vases"])
+      expect(shipping_manifest.values).to match_array([2, 5, 3])
+    end
 
 
 end
